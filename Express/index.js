@@ -1,19 +1,20 @@
 const express=require('express');
 
-const http=require('http');
 
 const app=express();
-app.use((res,req,next)=>{
+app.use("/",(req,res,next)=>{
    console.log(`First Line `)
+ res.send("<p>Hello there it is the cool guy standing in the line</p>")
+  next()
 
 });
-app.use((res,req,next)=>{
+app.use("/about",(req,res,next)=>{
    console.log(`Second Line `)
-   
+   res.send("<p>Hello there it is the second line</p>")
 });
 
-const server=http.createServer(app)
+
 const PORT=3001;
-server.listen(PORT,()=>{
+app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}`);
 })
