@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+    </header>
+    <nav>
+        <a href="/books-home">Home</a>
+        <a href="/books">Books</a>
+        <a href="/about">About</a>
+        <a href="/contact-us">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="profile-card">
+            <!-- <img src="<%= user.image %>" alt="Profile Picture"> -->
+            <h2><%= user.name %></h2>
+            <p><strong>Email:</strong> <%= user.email %></p>
+            <p><strong>Bio:</strong> <%= user.bio %></p>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Phone:</strong> <%= user.phone %></p>
+                <p><strong>Address:</strong> <%= user.address %></p>
+            </div>
+            <div class="contact-info">
+                <p><strong>Phone Name</strong> <%=nano.name%></p>
+                <p><strong>Phone Price</strong> <%=nano.price%></p>
+                <p><strong>Phone Camera</strong> <%=nano.camera%></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 User Profile. All rights reserved.</p>
+    </footer>
+</body>
+</html>
